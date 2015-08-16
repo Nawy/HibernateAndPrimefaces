@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+ 
+ <hibernate-mapping package="com.myhb.hibernate.pojo">
+ 	<class name="Event" table="T_EVENTS">
+ 		<meta attribute="class-description">
+ 			This class contains the events.
+ 		</meta>
+ 		
+ 		<id name="id" type="long" column="ev_id">
+ 			<generator class="native"/>
+ 		</id>
+ 		
+ 		<property name="title" column="ev_title" type="string" />
+ 		<property name="date" column="ev_date" type="date" /> 
+ 	</class>
+</hibernate-mapping>
