@@ -20,7 +20,7 @@ public class IndexBean implements Serializable {
 	 */
 	public static final long serialVersionUID = 1L;
 	
-	private String title = "";
+	private String title;
 	
 	@PostConstruct
 	public void init()
@@ -29,6 +29,7 @@ public class IndexBean implements Serializable {
 	
 	public void add()
 	{
+		System.out.println(this.title);
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trans = null;
 		try

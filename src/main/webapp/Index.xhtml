@@ -14,7 +14,9 @@
 	<h:form id="main-form">
 		<p:panelGrid columns="3">
 			<p:outputLabel value="Event title:" />
-			<p:inputText value="#{indexB.title}"/>
+			<p:inputText value="#{indexB.title}" >
+				<p:ajax event="change" process="@this" />
+			</p:inputText>
 			<p:commandButton value="Add"  actionListener="#{indexB.add}" immediate="true"/>
 		</p:panelGrid>
 	</h:form>
